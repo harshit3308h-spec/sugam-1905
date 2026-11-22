@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus-visible {
+  outline: 3px solid #f47920;
+  outline-offset: 2px;
+}
+
+/* GIGW High Contrast Mode Overrides */
+html.high-contrast,
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .hc-surface,
+html.high-contrast section,
+html.high-contrast header,
+html.high-contrast footer,
+html.high-contrast nav,
+html.high-contrast main,
+html.high-contrast .bg-white,
+html.high-contrast .bg-slate-50,
+html.high-contrast .bg-slate-100,
+html.high-contrast .bg-orange-50,
+html.high-contrast .bg-emerald-50,
+html.high-contrast .bg-amber-50,
+html.high-contrast .bg-blue-50 {
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #ffd600 !important;
+}
+
+html.high-contrast a,
+html.high-contrast button {
+  color: #ffd600 !important;
+  border-color: #ffd600 !important;
+}
+
+html.high-contrast button.bg-ukSaffron,
+html.high-contrast button.bg-ukNavy,
+html.high-contrast button.bg-ukEmerald,
+html.high-contrast a.bg-ukSaffron {
+  background-color: #ffd600 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html.high-contrast input,
+html.high-contrast select,
+html.high-contrast textarea {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #ffd600 !important;
+}
+
+html.high-contrast p,
+html.high-contrast span,
+html.high-contrast h1,
+html.high-contrast h2,
+html.high-contrast h3,
+html.high-contrast h4,
+html.high-contrast li,
+html.high-contrast label {
+  color: #ffffff !important;
+}
