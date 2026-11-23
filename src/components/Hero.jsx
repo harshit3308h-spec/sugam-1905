@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { SERVICES } from '../data/services';
+import cmPhoto from '../assets/cm-dhami.jpg';
 
 function DignitaryPortraitSVG() {
   return (
@@ -255,7 +256,11 @@ export default function Hero() {
           <div className="lg:col-span-5 space-y-4">
             {/* Respectful Official CM Card */}
             <div className="bg-white rounded-2xl border-2 border-orange-200 shadow-md p-5 flex items-center gap-4">
-              <DignitaryPortraitSVG />
+              <img
+                src={cmPhoto}
+                alt={t.hero.cmName}
+                className="w-24 h-24 shrink-0 rounded-xl object-cover object-top border-2 border-ukSaffron/40 shadow-sm"
+              />
               <div>
                 <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-ukSaffron bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200 mb-1.5">
                   उत्तराखंड शासन
