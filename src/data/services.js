@@ -50,7 +50,11 @@ export const SERVICES = [
     portalUrl: 'https://eservices.uk.gov.in/',
     supportsCertVerify: true,
   },
-  {
+
+
+
+
+  {       
     id: 'bhulekh',
     pillar: 'p1',
     name: 'Bhulekh Land Records',
@@ -331,3 +335,4 @@ export const SAMPLE_CERTIFICATES = {
     portal: 'Apuni Sarkar (eservices.uk.gov.in)',
   },
 };
+
