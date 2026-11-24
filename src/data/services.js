@@ -47,7 +47,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No mandatory notary affidavit required — digital self-declaration is legally valid under Uttarakhand e-Governance rules.',
     documents: ['Aadhaar Card / Voter ID', 'Passport-size Photograph', 'Electricity Bill or Family Register (Parivar Register) copy', 'Digital Self-Declaration (auto-generated online)'],
-    portalUrl: 'eservices.uk.gov.in',
+    portalUrl: 'https://eservices.uk.gov.in/',
     supportsCertVerify: true,
   },
   {
@@ -62,7 +62,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required to view or download certified digital Khatauni copies.',
     documents: ['District, Tehsil & Village Name', 'Khata Number or Khasra / Gata Number (or Account Holder Name)'],
-    portalUrl: 'bhulekh.uk.gov.in',
+    portalUrl: 'https://bhulekh.uk.gov.in/public/public_ror/Public_ROR.jsp',
     supportsCertVerify: true,
   },
   {
@@ -77,7 +77,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required for filing an RTS delay complaint or first appeal.',
     documents: ['Original Service Application Acknowledgement Slip', 'Applicant Mobile Number', 'Date of Application Submission'],
-    portalUrl: 'rtsc.uk.gov.in',
+    portalUrl: 'https://socialwelfare.uk.gov.in/rts-act/',
     supportsCertVerify: false,
   },
 
@@ -94,7 +94,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'Zero paperwork or affidavit needed for emergency rescue; simplified Patwari verification for relief.',
     documents: ['Exact Location / Village / GPS Landmark', 'Caller Mobile Number', 'Brief Photo of Damage (optional, for post-disaster relief)'],
-    portalUrl: 'usdma.uk.gov.in',
+    portalUrl: 'https://usdma.uk.gov.in/',
     supportsCertVerify: false,
   },
   {
@@ -109,7 +109,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required for Gaura Shakti registration, SOS alerts, or lost-article e-reports.',
     documents: ['Aadhaar Card / Photo ID', 'Active Mobile Number & Emergency Contact', 'Local Residence Address (for Tenant/Character Verification)'],
-    portalUrl: 'uttarakhandpolice.uk.gov.in',
+    portalUrl: 'https://www.myscheme.gov.in/schemes/gsy',
     supportsCertVerify: true,
   },
   {
@@ -124,7 +124,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required — instant Aadhaar OTP e-KYC with Ration Card.',
     documents: ['Aadhaar Card linked to Mobile', 'State Ration Card (NFSA / SFSA)'],
-    portalUrl: 'health.uk.gov.in',
+    portalUrl: 'https://abdm.gov.in/',
     supportsCertVerify: true,
   },
 
@@ -141,7 +141,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required for outage complaints, bill disputes, or standard domestic connections.',
     documents: ['Service Connection Number / Account ID', 'Latest Electricity Bill (for billing disputes)', 'Property Ownership / Rent Agreement (only for new connection)'],
-    portalUrl: 'upcl.org',
+    portalUrl: 'https://upcl.uk.gov.in/',
     supportsCertVerify: false,
   },
   {
@@ -156,7 +156,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required for water supply grievances or tanker booking.',
     documents: ['Consumer Connection ID (for existing users)', 'Ward / Mohalla / Village Landmark', 'Photo of Pipeline Leakage (optional)'],
-    portalUrl: 'ujs.uk.gov.in',
+    portalUrl: 'https://ujs.uk.gov.in/',
     supportsCertVerify: false,
   },
   {
@@ -171,7 +171,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No notary affidavit required; simple self-declaration with Aadhaar & Parivar Register suffices.',
     documents: ['Aadhaar Cards of all Family Members', 'Family Register (Parivar Register) / Electricity Bill', 'Passport Photo of Head of Family (Woman)', 'Income Certificate (for Antyodaya / PHH)'],
-    portalUrl: 'fcs.uk.gov.in',
+    portalUrl: 'https://fcs.uk.gov.in/',
     supportsCertVerify: true,
   },
 
@@ -188,7 +188,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required for job seeker registration or vacancy applications.',
     documents: ['Aadhaar Card', 'Uttarakhand Employment Exchange Registration (optional)', 'Educational Marksheets & Skill Certificates (PDF)'],
-    portalUrl: 'rojgarprayag.uk.gov.in',
+    portalUrl: 'https://rojgarprayag.uk.gov.in/',
     supportsCertVerify: false,
   },
   {
@@ -203,7 +203,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required; Gram Panchayat / Urban Local Body verification is processed digitally.',
     documents: ['Aadhaar Card & Age Proof', 'Bank Passbook (Aadhaar-seeded DBT account)', 'Income Certificate / BPL Card', 'Death Certificate (for Widow Pension) or UDID Card (for Divyang)'],
-    portalUrl: 'ssp.uk.gov.in',
+    portalUrl: 'https://ssp.uk.gov.in/frmApplicationVerificationDetailAtDifftLevels.aspx',
     supportsCertVerify: true,
   },
   {
@@ -218,7 +218,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required during online OTR or examination form submission.',
     documents: ['High School & Graduation Marksheets', 'Scanned Photo & Signature', 'Category / Uttarakhand Domicile Certificate (if claiming reservation)'],
-    portalUrl: 'psc.uk.gov.in',
+    portalUrl: 'https://psc.uk.gov.in/',
     supportsCertVerify: false,
   },
 
@@ -235,7 +235,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: '100% free & zero affidavit — only valid photo ID and travel dates required.',
     documents: ['Aadhaar Card / Passport / Driving License', 'Passport-size Photo', 'Planned Travel Dates & Shrine Selection', 'Emergency Contact Number'],
-    portalUrl: 'registrationandtouristcare.uk.gov.in',
+    portalUrl: 'https://registrationandtouristcare.uk.gov.in/index.php',
     supportsCertVerify: true,
   },
   {
@@ -250,7 +250,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No paperwork required — show digital SMS/PDF ticket on mobile while boarding.',
     documents: ['Passenger Name & Mobile Number', 'Photo ID (required only during boarding for concession passes)'],
-    portalUrl: 'utconline.uk.gov.in',
+    portalUrl: 'https://utconline.uk.gov.in/home.aspx',
     supportsCertVerify: false,
   },
   {
@@ -265,7 +265,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'Open public advisory feed — no login or documentation required.',
     documents: ['No documents required — select your district or highway route to view live alerts'],
-    portalUrl: 'pwd.uk.gov.in',
+    portalUrl: 'https://mausam.imd.gov.in/',
     supportsCertVerify: false,
   },
 ];

@@ -192,34 +192,55 @@ export default function InfoModals() {
                 <span>
                   <strong>Expected SLA:</strong> {activeModal.service.sla}
                 </span>
-                <span>
-                  <strong>Official Domain:</strong> {activeModal.service.portalUrl}
+                <span className="flex items-center gap-1.5 flex-wrap">
+                  <strong>Official Domain:</strong>{' '}
+                  <a
+                    href={activeModal.service.portalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-ukNavy hover:text-ukSaffron font-bold underline inline-flex items-center gap-1 transition-colors"
+                    title={`Open ${activeModal.service.name} official site in a new tab`}
+                  >
+                    <span className="break-all">{activeModal.service.portalUrl}</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-ukSaffron shrink-0" aria-hidden="true" />
+                  </a>
                 </span>
               </div>
 
-              <div className="flex flex-wrap items-center justify-end gap-3 pt-2 border-t border-slate-100">
-                {activeModal.service.supportsCertVerify && (
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100">
+                <a
+                  href={activeModal.service.portalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-ukNavy hover:bg-ukNavyDark text-white text-sm font-bold shadow-sm transition-all"
+                >
+                  <span>Visit Official Portal</span>
+                  <ExternalLink className="w-4 h-4 text-ukSaffronLight" aria-hidden="true" />
+                </a>
+
+                <div className="flex flex-wrap items-center gap-3">
+                  {activeModal.service.supportsCertVerify && (
+                    <button
+                      type="button"
+                      onClick={() => setActiveModal({ type: 'certificate', tab: 'verify' })}
+                      className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-ukEmerald text-ukEmerald hover:bg-emerald-50 text-sm font-bold transition-colors"
+                    >
+                      <ShieldCheck className="w-4 h-4" />
+                      <span>Verify Certificate</span>
+                    </button>
+                  )}
                   <button
                     type="button"
-                    onClick={() => setActiveModal({ type: 'certificate', tab: 'verify' })}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-ukEmerald text-ukEmerald hover:bg-emerald-50 text-sm font-bold"
+                    onClick={() => {
+                      closeModal();
+                      setGrievanceTab('register');
+                      scrollToSection('grievance-section');
+                    }}
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-ukSaffron hover:bg-ukSaffronLight text-white text-sm font-bold transition-colors"
                   >
-                    <ShieldCheck className="w-4 h-4" />
-                    <span>Verify Certificate</span>
+                    <span>File Service Grievance / Request</span>
                   </button>
-                )}
-                <button
-                  type="button"
-                  onClick={() => {
-                    closeModal();
-                    setGrievanceTab('register');
-                    scrollToSection('grievance-section');
-                  }}
-                  className="inline-flex items-center gap-1.5 px-5 py-2 rounded-xl bg-ukSaffron hover:bg-ukSaffronLight text-white text-sm font-bold"
-                >
-                  <span>File Service Grievance / Request</span>
-                  <ExternalLink className="w-4 h-4" />
-                </button>
+                </div>
               </div>
             </div>
           </div>
@@ -239,11 +260,10 @@ export default function InfoModals() {
                 <button
                   type="button"
                   onClick={() => setLoginRole('citizen')}
-                  className={`flex items-center justify-center gap-2 py-3 rounded-xl border-2 text-sm font-bold transition-all ${
-                    loginRole === 'citizen'
-                      ? 'border-ukSaffron bg-orange-50 text-ukSaffron'
-                      : 'border-slate-200 text-slate-600'
-                  }`}
+                  className={`flex items-center justify-center gap-2 py-3 rounded-xl border-2 text-sm font-bold transition-all ${loginRole === 'citizen'
+                    ? 'border-ukSaffron bg-orange-50 text-ukSaffron'
+                    : 'border-slate-200 text-slate-600'
+                    }`}
                 >
                   <User className="w-4 h-4" />
                   <span>Citizen Login</span>
@@ -251,11 +271,10 @@ export default function InfoModals() {
                 <button
                   type="button"
                   onClick={() => setLoginRole('officer')}
-                  className={`flex items-center justify-center gap-2 py-3 rounded-xl border-2 text-sm font-bold transition-all ${
-                    loginRole === 'officer'
-                      ? 'border-ukNavy bg-slate-100 text-ukNavy'
-                      : 'border-slate-200 text-slate-600'
-                  }`}
+                  className={`flex items-center justify-center gap-2 py-3 rounded-xl border-2 text-sm font-bold transition-all ${loginRole === 'officer'
+                    ? 'border-ukNavy bg-slate-100 text-ukNavy'
+                    : 'border-slate-200 text-slate-600'
+                    }`}
                 >
                   <Briefcase className="w-4 h-4" />
                   <span>Officer / L1–L4 Login</span>
@@ -487,11 +506,10 @@ export default function InfoModals() {
                 <button
                   type="button"
                   onClick={() => setActiveModal({ type: 'manual', tab: 'manual' })}
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold ${
-                    currentManualTab === 'manual'
-                      ? 'bg-ukSaffron text-white'
-                      : 'bg-slate-100 text-ukNavy'
-                  }`}
+                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold ${currentManualTab === 'manual'
+                    ? 'bg-ukSaffron text-white'
+                    : 'bg-slate-100 text-ukNavy'
+                    }`}
                 >
                   <BookOpen className="w-4 h-4" />
                   <span>Citizen &amp; Officer Training Manual</span>
@@ -499,11 +517,10 @@ export default function InfoModals() {
                 <button
                   type="button"
                   onClick={() => setActiveModal({ type: 'manual', tab: 'cpgrams' })}
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold ${
-                    currentManualTab === 'cpgrams'
-                      ? 'bg-ukNavy text-white'
-                      : 'bg-slate-100 text-ukNavy'
-                  }`}
+                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold ${currentManualTab === 'cpgrams'
+                    ? 'bg-ukNavy text-white'
+                    : 'bg-slate-100 text-ukNavy'
+                    }`}
                 >
                   <Globe2 className="w-4 h-4" />
                   <span>CPGRAMS Central Portal Bridge</span>
@@ -533,17 +550,28 @@ export default function InfoModals() {
                     <p><strong>State Matters:</strong> Use SUGAM 1905 Register Complaint for instant routing to Uttarakhand departments.</p>
                     <p><strong>Central Matters:</strong> Reference your Uttarakhand district PIN code so CPGRAMS routes to the Dehradun Regional Nodal Office.</p>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      closeModal();
-                      setGrievanceTab('register');
-                      scrollToSection('grievance-section');
-                    }}
-                    className="px-4 py-2 rounded-xl bg-ukSaffron text-white text-xs font-bold hover:bg-ukSaffronLight"
-                  >
-                    File State Grievance on SUGAM 1905
-                  </button>
+                  <div className="flex flex-wrap items-center gap-3 pt-1">
+                    <a
+                      href="https://pgportal.gov.in/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-ukNavy text-white text-xs font-bold hover:bg-ukNavyDark shadow-sm transition-all"
+                    >
+                      <span>Open CPGRAMS Portal (pgportal.gov.in)</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-ukSaffronLight" />
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        closeModal();
+                        setGrievanceTab('register');
+                        scrollToSection('grievance-section');
+                      }}
+                      className="px-4 py-2 rounded-xl bg-ukSaffron text-white text-xs font-bold hover:bg-ukSaffronLight transition-all"
+                    >
+                      File State Grievance on SUGAM 1905
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -591,11 +619,10 @@ export default function InfoModals() {
                         className="p-1.5 transition-transform hover:scale-110"
                       >
                         <Star
-                          className={`w-9 h-9 ${
-                            num <= rating
-                              ? 'text-amber-400 fill-amber-400'
-                              : 'text-slate-300'
-                          }`}
+                          className={`w-9 h-9 ${num <= rating
+                            ? 'text-amber-400 fill-amber-400'
+                            : 'text-slate-300'
+                            }`}
                         />
                       </button>
                     ))}

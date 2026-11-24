@@ -10,6 +10,7 @@ import {
   Sparkles,
   CheckCircle2,
   X,
+  ExternalLink,
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { SERVICES } from '../data/services';
@@ -171,21 +172,48 @@ export default function Hero() {
 
               {/* Live Instant Results Dropdown */}
               {searchQuery.trim() !== '' && (
-                <div className="absolute left-0 right-0 mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl z-30 max-h-64 overflow-y-auto divide-y divide-slate-100">
+                <div className="absolute left-0 right-0 mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl z-30 max-h-72 overflow-y-auto divide-y divide-slate-100">
                   {matchingServices.length > 0 ? (
                     matchingServices.map((svc) => (
-                      <button
+                      <div
                         key={svc.id}
-                        type="button"
-                        onClick={() => setActiveModal({ type: 'service', service: svc })}
-                        className="w-full text-left px-4 py-2.5 hover:bg-orange-50 flex items-center justify-between gap-3 transition-colors"
+                        className="px-4 py-2.5 hover:bg-orange-50 flex items-center justify-between gap-3 transition-colors group"
                       >
-                        <div>
-                          <p className="text-sm font-bold text-ukNavy">{svc.name}</p>
-                          <p className="text-xs text-slate-500">{svc.hindiName} • {svc.department}</p>
+                        <button
+                          type="button"
+                          onClick={() => setActiveModal({ type: 'service', service: svc })}
+                          className="flex-1 text-left min-w-0"
+                        >
+                          <p className="text-sm font-bold text-ukNavy group-hover:text-ukSaffron transition-colors truncate">
+                            {svc.name}
+                          </p>
+                          <p className="text-xs text-slate-500 truncate">
+                            {svc.hindiName} • {svc.department}
+                          </p>
+                        </button>
+                        <div className="flex items-center gap-2 shrink-0">
+                          {svc.portalUrl && (
+                            <a
+                              href={svc.portalUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              title={`Open ${svc.name} official portal`}
+                              className="text-[11px] font-semibold text-ukNavy hover:text-ukSaffron bg-slate-100 hover:bg-orange-100 border border-slate-200 hover:border-orange-300 px-2 py-1 rounded-md transition-all inline-flex items-center gap-1"
+                            >
+                              <span>Official Site</span>
+                              <ExternalLink className="w-3 h-3 text-ukSaffron" />
+                            </a>
+                          )}
+                          <button
+                            type="button"
+                            onClick={() => setActiveModal({ type: 'service', service: svc })}
+                            className="text-xs font-semibold text-ukSaffron hover:underline"
+                          >
+                            View →
+                          </button>
                         </div>
-                        <span className="text-xs font-semibold text-ukSaffron shrink-0">View →</span>
-                      </button>
+                      </div>
                     ))
                   ) : (
                     <div className="px-4 py-3 text-xs text-slate-500">{t.pillars.noResults}</div>
