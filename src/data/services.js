@@ -207,7 +207,7 @@ export const SERVICES = [
     noAffidavit: true,
     affidavitNote: 'No affidavit required; Gram Panchayat / Urban Local Body verification is processed digitally.',
     documents: ['Aadhaar Card & Age Proof', 'Bank Passbook (Aadhaar-seeded DBT account)', 'Income Certificate / BPL Card', 'Death Certificate (for Widow Pension) or UDID Card (for Divyang)'],
-    portalUrl: 'https://ssp.uk.gov.in/frmApplicationVerificationDetailAtDifftLevels.aspx',
+    portalUrl: 'https://ssp.uk.gov.in/frmApplicantionVerificationDetailAtDiffLevels.aspx',
     supportsCertVerify: true,
   },
   {
